@@ -1,9 +1,8 @@
 const https = require('https');
-const log = console.log;
 
-function getHTML (options, callback) {
+module.exports = function getHTML (options, callback) {
 
-  /* Add your code here */
+  /* Your code here */
   https.get(options, (res) => {
 
     // set response encoding
@@ -21,15 +20,4 @@ function getHTML (options, callback) {
 
   });
 
-}
-
-function printHTML (html) {
-  log(html);
-}
-
-var requestOptions = {
-  host: 'sytantris.github.io',
-  path: '/http-examples/step4.html'
 };
-
-getHTML(requestOptions, printHTML);
